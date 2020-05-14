@@ -6,7 +6,7 @@ def func():
         sample = sr.AudioFile('file.wav')
         
         with sample as source:
-            #r.adjust_for_ambient_noise(source)
+            r.adjust_for_ambient_noise(source)
             audio = r.record(source)
     
 
