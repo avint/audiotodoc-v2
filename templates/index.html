@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AudiototDoc</title>
+    <link rel="icon" href="{{ url_for('static', filename='sound.png') }}" type="image/gif" sizes="16x16">
+  </head>
+<style>
+  .body{
+    background-image: url("../static/sound.png");
+    background-color: #cccccc;
+    height: 20rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }
+  #h{margin:10% 35% 5%;}
+</style>
+
+  <body  class="container body">
+      <h2 id="h">Audio to Doc</h2>
+
+      <form action = "{{url_for('index')}}" method = "POST" enctype = "multipart/form-data" id='form'>
+        
+        <div class="jumbotron">
+          <h3 class="row">{{text}}</h3>
+          <input type = "file" name = "audio_data" class="form-control" placeholder="audio" required/></div>  
+        <div class="jumbotron"><button type = "submit" class="btn btn-info btn-lg">Start Convertion</button></div> 
+
+    
+  </body>
+</html>
